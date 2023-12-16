@@ -1,0 +1,11 @@
+CXX=g++
+TARGET=main2
+
+run: $(TARGET)
+	./$(TARGET)
+
+$(TARGET): main2.cpp
+	$(CXX) main2.cpp -o $(TARGET) -pthread
+
+clean:
+	rm -f $(TARGET)
